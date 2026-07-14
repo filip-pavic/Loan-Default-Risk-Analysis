@@ -1,0 +1,60 @@
+/*
+===============================================================================
+Home Credit Default Risk - Power BI DAX Measures & Calculated Columns
+===============================================================================
+*/
+
+-- ============================================================================
+-- SECTION 1: CORE METRICS (MEASURES)
+-- ============================================================================
+
+-- Total Applicant Count
+Total Applicants = 
+COUNT('application_train'[SK_ID_CURR])
+
+-- Defaulted Applicants Count (TARGET = 1)
+Defaulted Applicants = 
+CALCULATE(
+    [Total Applicants],
+    'application_train'[TARGET] = 1
+)
+
+-- Portfolio Baseline Default Rate (%)
+Default Rate = 
+DIVIDE(
+    [Defaulted Applicants],
+    [Total Applicants],
+    0
+)
+
+-- Locked Portfolio Baseline Benchmark (Unfiltered)
+Baseline Default Rate = 
+CALCULATE(
+    [Default Rate],
+    ALL('application_train')
+)
+
+
+-- ============================================================================
+-- SECTION 2: CALCULATED COLUMNS
+-- ===========================================================================
+
+-- External Bureau Write-Off Segment (STATUS = 5 Flag)
+WriteOff Segment = 
+IF(
+    RELATED('Dim_Bureau_Summary'[Has_External_Writeoff]) = 1, 
+    "External Write-Off (Status 5)", 
+    "No Write-Off History"
+)
+
+-- Human-Readable Age Group Brackets
+Age Group = 
+VAR AgeInYears = INT(ABS('application_train'[DAYS_BIRTH]) / 365.25)
+RETURN
+SWITCH(
+    TRUE(),
+    AgeInYears < 30, "< 30 (Young)",
+    AgeInYears <= 45, "30 - 45 (Mid-Career)",
+    AgeInYears <= 60, "46 - 60 (Mature)",
+    "60+ (Senior / Pensioner)"
+)
