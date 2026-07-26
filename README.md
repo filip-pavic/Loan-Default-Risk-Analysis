@@ -86,7 +86,8 @@ Access DAX used here: [`/dax/dax_measures.dax`](./dax/dax_measures.dax)
 You can access the interractive dashboard here:
 https://app.powerbi.com/view?r=eyJrIjoiYTYwNGJkNjYtMjZjNi00OWFiLThmYTQtNzUyYjAwNGEzOTVjIiwidCI6ImQ5NzRiNGRmLWVlYzItNDMzZS1hOTE4LTNmZTE4NDEyNzM1ZiIsImMiOjh9
 
-<img width="1368" height="762" alt="image" src="https://github.com/user-attachments/assets/da7026d7-aab2-4a76-a9a8-d807e64f5ef9" />
+<img width="1372" height="762" alt="image" src="https://github.com/user-attachments/assets/5de20c41-ace1-4cc6-a40e-630fd9a5b2fd" />
+
 
 *Figure 1: Executive Risk Overview highlighting baseline portfolio metrics, payment delinquency behaviors, and severe external credit write off triggers.*
 
@@ -103,7 +104,8 @@ Evaluating the "Pensioner" anomaly isolated in Phase 1 showed a highly stable sa
 You can access full interractive dashboard here:
 https://app.powerbi.com/view?r=eyJrIjoiYTYwNGJkNjYtMjZjNi00OWFiLThmYTQtNzUyYjAwNGEzOTVjIiwidCI6ImQ5NzRiNGRmLWVlYzItNDMzZS1hOTE4LTNmZTE4NDEyNzM1ZiIsImMiOjh9
 
-<img width="1363" height="768" alt="image" src="https://github.com/user-attachments/assets/f085eddd-7706-422f-9a6e-1c7051530cc0" />
+<img width="1369" height="758" alt="image" src="https://github.com/user-attachments/assets/f846ffaf-a4cb-477d-9aa0-a1b6039fae4c" />
+
 
 *Figure 2: Demographic Deep-Dive displaying the safe Pensioner segment (5.41% default rate), borrower age trajectories, and applicant volume distributions.*
 
