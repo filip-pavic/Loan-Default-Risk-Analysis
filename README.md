@@ -19,7 +19,7 @@
 Home Credit faces compressed gross margins due to loan defaults, creating a critical business need to optimize risk assessment for incoming credit applications.
 The primary business objective of this project is to minimize default rates by identifying exactly which customer behaviors, internal payment disciplines, and external credit bureau histories correlate with financial distress. 
 
-### Key Questions to Approach the Analysis With:
+### Key Questions Approaching the Analysis With:
 1. **Baseline Risk:** What is our current baseline exposure across the total portfolio?
 2. **Volume vs. Behavior:** Do clients that have a high volume of external loans indicate higher risk, or should we focus on internal payment tracking which will provide a more accurate warning sign?
 3. **Severe Bureau Alerts:** How heavily does a history of external debt write offs impact an applicant's default probability at our institution?
